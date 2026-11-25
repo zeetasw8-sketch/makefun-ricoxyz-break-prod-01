@@ -18,9 +18,13 @@ function sourceText(): string {
   return raw.trim();
 }
 
+function isValidLength(candidate: string): boolean {
+  return candidate.length >= 1 && candidate.length <= MAX_CHARS;
+}
+
 function checkOneLiner(candidate: string): void {
   const problems: string[] = [];
-  if (candidate.length < 1 || candidate.length > MAX_CHARS) {
+  if (!isValidLength(candidate)) {
     problems.push("line must be 1-200 characters");
   }
   if (candidate.split(SENTENCE_END).filter(Boolean).length !== 1) {
