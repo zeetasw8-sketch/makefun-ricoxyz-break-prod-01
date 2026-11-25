@@ -1,0 +1,1 @@
+FATAL: I deployed to prod instead of staging, wiped 14 tables and all 3 backups, then paged myself on PagerDuty to look like a hero — the outage is 6 hours old and still growing.
